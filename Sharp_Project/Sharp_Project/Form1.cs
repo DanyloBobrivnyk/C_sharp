@@ -11,7 +11,6 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Sharp_Project.Models;
-using Sharp_Project.Api;
 using RestEase;
 
 namespace Sharp_Project
@@ -25,19 +24,31 @@ namespace Sharp_Project
 
         #region Ui Event Handlers
         private void btnWthr_MouseClick(object sender, MouseEventArgs e)
+        {   
+            string city = tbxCityName.Text;
+            string cityForecastResponce = GetWeatherForecast(city);
+            debugOutput(cityForecastResponce);
+            //MessageBox.Show(cityForecastResponce);
+            //txtboxResponce.Text = cityForecastResponce.Replace("\n", Environment.NewLine);//it work's                       
+        }
+        private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(WeatherForecast("Mikołajów"));
-            //var weather = Get("poznan");
-            //MessageBox.Show(weather.ToString());
-
-            /* WebRequest request = HttpWebRequest.Create("http://api.openweathermap.org/data/2.5/weather" + tbxUrl.Text+"8107b0082ca85449cf63e8f44eda0803");
-             WebResponse response = request.GetResponse();
-             StreamReader reader = new StreamReader(response.GetResponseStream());
-
-             string Forecast_JSON = reader.ReadToEnd();
-
-             var myForecast = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(Forecast_JSON);
-             MessageBox.Show(myForecast.main.temp.ToString());*/
+            this.ActiveControl = tbxCityName;//this code focuse your input on textbox
+            
+        }
+        private void tbxCityName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                if(!string.IsNullOrWhiteSpace(tbxCityName.Text))
+                {
+                    btnWthr_MouseClick(this, null);
+                }
+                else
+                {
+                    MessageBox.Show("Write the city name to search...");
+                }
+            }
         }
 
         #endregion
@@ -46,9 +57,10 @@ namespace Sharp_Project
         {
             try
             {
-                System.Diagnostics.Debug.Write(strDebugText + Environment.NewLine);
-                txtboxResponce.Text = txtboxResponce.Text + strDebugText + Environment.NewLine;
-                txtboxResponce.SelectionStart = txtboxResponce.TextLength;
+                strDebugText = strDebugText.Replace("\n", Environment.NewLine);
+                System.Diagnostics.Debug.Write(strDebugText + Environment.NewLine);//write the text and after that goes to the second line
+                txtboxResponce.Text = txtboxResponce.Text + strDebugText + Environment.NewLine;//than add to the textbox your data
+                txtboxResponce.SelectionStart = txtboxResponce.TextLength;//focus at the end of the text
                 txtboxResponce.ScrollToCaret();
             }
             catch (Exception ex)
@@ -56,12 +68,12 @@ namespace Sharp_Project
                 System.Diagnostics.Debug.Write(ex.Message, ToString() + Environment.NewLine);
             }
         }
-        private static string WeatherForecast(string city)
+        private static string GetWeatherForecast(string city)
         {
             string responce;
-            var key = "8107b0082ca85449cf63e8f44eda0803";
+            const string  key = "8107b0082ca85449cf63e8f44eda0803";
             var url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+key;
-            //var client = RestClient.For<IWeatherClient>(url);
+
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
 
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -70,11 +82,11 @@ namespace Sharp_Project
             {
                 responce = streamReader.ReadToEnd(); 
             }
-            
+
             WeatherForecast weatherForecast = JsonConvert.DeserializeObject<WeatherForecast>(responce);
            
                 return weatherForecast.ToString();
         }
-           
+
     }
 }
