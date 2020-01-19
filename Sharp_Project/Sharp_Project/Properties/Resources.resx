@@ -121,16 +121,22 @@
   <data name="a909c393e9a343c4ecf1afbdf657095c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a909c393e9a343c4ecf1afbdf657095c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="q1tOfFbRwd4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\q1tOfFbRwd4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5c790acfaed94_thumb900" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5c790acfaed94_thumb900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a909c393e9a343c4ecf1afbdf657095c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a909c393e9a343c4ecf1afbdf657095c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="74728" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\74728.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="q1tOfFbRwd4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\q1tOfFbRwd4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ixHTw79zBhQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ixHTw79zBhQ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a909c393e9a343c4ecf1afbdf657095c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a909c393e9a343c4ecf1afbdf657095c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hy_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hy_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

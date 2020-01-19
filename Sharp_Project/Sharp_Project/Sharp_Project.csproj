@@ -74,12 +74,18 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -94,7 +100,9 @@
     <None Include="Resources\a909c393e9a343c4ecf1afbdf657095c.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\5c790acfaed94_thumb900.jpg" />
     <Content Include="Resources\74728.jpg" />
+    <None Include="Resources\hy_1.png" />
     <Content Include="Resources\ixHTw79zBhQ.jpg" />
     <Content Include="Resources\q1tOfFbRwd4.jpg" />
   </ItemGroup>

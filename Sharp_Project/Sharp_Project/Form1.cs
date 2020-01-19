@@ -18,6 +18,7 @@ namespace Sharp_Project
 {
     public partial class Form1 : Form
     {
+        private bool forecastFormExt;
         public Form1()
         {
             InitializeComponent();
@@ -26,11 +27,11 @@ namespace Sharp_Project
         #region Ui Event Handlers
         private void btnWthr_MouseClick(object sender, MouseEventArgs e)
         {
-            txtboxResponce.Text = "";
             string city = tbxCityName.Text;
             if(!string.IsNullOrWhiteSpace(city) && city[city.Length-1].ToString() != " ")
             {
                 string cityForecastResponce = GetWeatherForecast(city);
+                txtboxResponce.Text = "";
                 DebugOutput(cityForecastResponce);
                 this.ActiveControl = tbxCityName;
             }
@@ -41,7 +42,8 @@ namespace Sharp_Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {           
-            this.ActiveControl = tbxCityName;//this code focuse your input on textbox           
+            this.ActiveControl = tbxCityName;//this code focuse your input on textbox   
+            forecastFormExt = true;
         }
         private void tbxCityName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -50,7 +52,18 @@ namespace Sharp_Project
                     btnWthr_MouseClick(this, null);
             }
         }
-
+        private void btnExtendedForecast_Click(object sender, EventArgs e)
+        {
+            forecastFormExt = true;
+            btnExtendedForecast.BackColor = SystemColors.HighlightText;
+            btnSimpleForecast.BackColor = SystemColors.ScrollBar;
+        }
+        private void btnSimpleForecast_Click(object sender, EventArgs e)
+        {
+            forecastFormExt = false;
+            btnExtendedForecast.BackColor = SystemColors.ScrollBar;
+            btnSimpleForecast.BackColor = SystemColors.HighlightText;
+        }
         #endregion
 
         private void DebugOutput(string strDebugText)
@@ -86,12 +99,20 @@ namespace Sharp_Project
                     streamReader.Close();
                 }
 
-                IWeatherForecast weatherForecast = JsonConvert.DeserializeObject<WeatherForecast>(responce);
-
+                IWeatherForecast weatherForecast;
+                if (forecastFormExt)
+                { 
+                    weatherForecast = JsonConvert.DeserializeObject<ExtendedWeatherForecast>(responce);
+                }
+                else
+                {
+                    weatherForecast = JsonConvert.DeserializeObject<WeatherForecast>(responce);
+                }
 
                 pnlWeather.BackgroundImage = weatherForecast.GetIcon();
 
                 return weatherForecast.GetForecastInfo();
+
             }
             catch (Exception ex)
             {
@@ -100,5 +121,6 @@ namespace Sharp_Project
             }
 
         }
+
     }
 }
