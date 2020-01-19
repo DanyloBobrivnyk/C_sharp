@@ -64,6 +64,21 @@ namespace Sharp_Project
             btnExtendedForecast.BackColor = SystemColors.ScrollBar;
             btnSimpleForecast.BackColor = SystemColors.HighlightText;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtboxResponce.Text)&&txtboxResponce.Text.Length > 10)
+            {
+                string text = txtboxResponce.Text;
+                var a = new StreamWriter("Forecast_Data.txt",true);
+                a.Write(text);
+                a.Close();
+                MessageBox.Show("Data saved.");
+            }
+            else
+            {
+                MessageBox.Show("There is no data to save.");
+            }
+        }
         #endregion
 
         private void DebugOutput(string strDebugText)

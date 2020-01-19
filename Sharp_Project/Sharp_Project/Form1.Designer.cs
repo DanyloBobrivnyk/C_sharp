@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSimpleForecast = new System.Windows.Forms.Button();
             this.btnExtendedForecast = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -146,13 +147,26 @@
             this.btnExtendedForecast.UseVisualStyleBackColor = false;
             this.btnExtendedForecast.Click += new System.EventHandler(this.btnExtendedForecast_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(272, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 44);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Save data";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImage = global::Sharp_Project.Properties.Resources._5c790acfaed94_thumb900;
-            this.ClientSize = new System.Drawing.Size(592, 495);
+            this.ClientSize = new System.Drawing.Size(452, 495);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExtendedForecast);
             this.Controls.Add(this.btnSimpleForecast);
             this.Controls.Add(this.groupBox1);
@@ -180,6 +194,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnExtendedForecast;
         private System.Windows.Forms.Button btnSimpleForecast;
+        private System.Windows.Forms.Button button1;
     }
 }
 
