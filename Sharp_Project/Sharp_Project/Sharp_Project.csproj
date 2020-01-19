@@ -59,8 +59,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IWeatherForecast.cs" />
+    <Compile Include="Models\ExtendedWeatherForecast.cs" />
     <Compile Include="Models\MainInform.cs" />
+    <Compile Include="Models\SysInform.cs" />
     <Compile Include="Models\WeatherForecast.cs" />
+    <Compile Include="Models\WeatherInform.cs" />
+    <Compile Include="Models\WindInform.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -68,13 +73,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,8 +89,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Api\" />
+    <None Include="Resources\a909c393e9a343c4ecf1afbdf657095c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\74728.jpg" />
+    <Content Include="Resources\ixHTw79zBhQ.jpg" />
+    <Content Include="Resources\q1tOfFbRwd4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

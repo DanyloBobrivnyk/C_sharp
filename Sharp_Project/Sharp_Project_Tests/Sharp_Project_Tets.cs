@@ -5,17 +5,17 @@ using Xunit;
 
 namespace Sharp_Project_Tests
 {
-    [TestClass]
+    
     public class Sharp_Project_Tets
     {
         private readonly WeatherForecast forecast;
 
-        [TestMethod]
-
-        public void GetWeatherForecast_CityName_forecastReturned()
+        [Fact]
+        
+        public void GetWeatherForecast_CityName_Validation_Success()
         {
-            //Arrange
-           
+            var forecast = new WeatherForecast();
+            
         }
     }
 }

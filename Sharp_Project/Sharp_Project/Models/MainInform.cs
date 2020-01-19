@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Sharp_Project.Models
 {
-    public class MainInform
+    class MainInform 
     {
         [JsonProperty("temp")]
         public double Temp { get; set; }
-
+   
         [JsonProperty("feels_like")]
         public double FeelsLike { get; set; }
 
@@ -20,5 +20,12 @@ namespace Sharp_Project.Models
 
         [JsonProperty("temp_max")]
         public double TempMax { get; set; }
+
+        [JsonProperty("pressure")]
+        public int Pressure { get; set; }
+        
+        [JsonProperty("humidity")]
+        public int Humidity { get; set; }
+    
     }
 }
