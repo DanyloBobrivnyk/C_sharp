@@ -13,12 +13,14 @@ using Newtonsoft.Json;
 using Sharp_Project.Models;
 using RestEase;
 using Sharp_Project.Interfaces;
+using System.Security.Permissions;
 
 namespace Sharp_Project
 {
     public partial class Form1 : Form
     {
         private bool forecastFormExt;
+        //private string filepath = Environment.CurrentDirectory+@"\city.list1.json";        
         public Form1()
         {
             InitializeComponent();
@@ -42,15 +44,28 @@ namespace Sharp_Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {           
+            
             this.ActiveControl = tbxCityName;//this code focuse your input on textbox   
+            #region Comment
+            /*
+            //JsonItem obj = new JsonItem();
+            StreamReader r = new StreamReader(filepath);         
+            var json = r.ReadToEnd();
+            r.Close();
+            List<JsonItem> items = new List<JsonItem>();
+            items = JsonConvert.DeserializeObject<JsonItem>(json);
+            */
+            #endregion
+
             forecastFormExt = true;
         }
         private void tbxCityName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                     btnWthr_MouseClick(this, null);
             }
+            
         }
         private void btnExtendedForecast_Click(object sender, EventArgs e)
         {
@@ -136,6 +151,5 @@ namespace Sharp_Project
             }
 
         }
-
     }
 }

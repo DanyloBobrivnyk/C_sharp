@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="">
+        <p>People</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model.People)
+                {
+                    <tr>
+                        <td>@person.FirstName</td>
+                        <td>@person.LastName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Category Id</th>
+                    <th>Category name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model.Categories)
+                {
+                    <tr>
+                        <td><a href="https://localhost:44342?id=@person.Id">@person.Id</a> </td>
+                        <td>@person.CategoryName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form id="index" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="form-control" placeholder="First name" asp-for="Person.FirstName" />
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" placeholder="Last name" asp-for="Person.LastName" />
+                </div>
+            </div>
+            <button class="btn btn-success">Add</button>
+        </form>
+    </div>

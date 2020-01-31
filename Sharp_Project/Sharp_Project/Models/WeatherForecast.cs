@@ -13,6 +13,12 @@ namespace Sharp_Project.Models
 {
     class WeatherForecast : IWeatherForecast
     {
+        public WeatherForecast()
+        { }
+        public WeatherForecast(string name)
+        {
+            this.Name = name;
+        }
 
         [JsonProperty("id")]
         public long Id { get; set; }

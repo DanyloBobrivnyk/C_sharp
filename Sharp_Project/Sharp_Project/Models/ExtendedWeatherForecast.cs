@@ -10,7 +10,6 @@ namespace Sharp_Project.Models
 {
     class ExtendedWeatherForecast : WeatherForecast, IWeatherForecast
     {
-        
        public WindInform Wind { get; set; }
 
        //public WeatherInform[] WeatherMain { get; set; }

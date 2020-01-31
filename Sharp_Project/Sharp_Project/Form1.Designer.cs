@@ -59,7 +59,7 @@
             this.lblResponce.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblResponce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblResponce.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblResponce.Location = new System.Drawing.Point(29, 134);
+            this.lblResponce.Location = new System.Drawing.Point(29, 125);
             this.lblResponce.Name = "lblResponce";
             this.lblResponce.Size = new System.Drawing.Size(184, 27);
             this.lblResponce.TabIndex = 6;
@@ -105,7 +105,7 @@
             this.panel1.Controls.Add(this.txtboxResponce);
             this.panel1.Controls.Add(this.btnWthr);
             this.panel1.Controls.Add(this.pnlWeather);
-            this.panel1.Location = new System.Drawing.Point(29, 164);
+            this.panel1.Location = new System.Drawing.Point(29, 155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 319);
             this.panel1.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             this.btnExtendedForecast.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnExtendedForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExtendedForecast.Location = new System.Drawing.Point(339, 13);
+            this.btnExtendedForecast.Location = new System.Drawing.Point(334, 13);
             this.btnExtendedForecast.Name = "btnExtendedForecast";
             this.btnExtendedForecast.Size = new System.Drawing.Size(90, 62);
             this.btnExtendedForecast.TabIndex = 10;
@@ -151,7 +151,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(272, 93);
+            this.button1.Location = new System.Drawing.Point(300, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 44);
             this.button1.TabIndex = 11;
@@ -165,7 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImage = global::Sharp_Project.Properties.Resources._5c790acfaed94_thumb900;
-            this.ClientSize = new System.Drawing.Size(452, 495);
+            this.ClientSize = new System.Drawing.Size(457, 498);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExtendedForecast);
             this.Controls.Add(this.btnSimpleForecast);
